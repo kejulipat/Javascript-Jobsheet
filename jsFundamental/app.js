@@ -1,3 +1,5 @@
+//Bagian 1 — JavaScript Fundamentals dari Sudut Pandang Problem Solving 
+
 const name = "Budi";
 console.log(`Halo, ${name}`);
 

@@ -1,3 +1,5 @@
+//Bagian 4 — Flattening Data
+
 const tags = [
     ["computer", "office"],
     ["electronics"],

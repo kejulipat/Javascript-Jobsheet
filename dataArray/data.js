@@ -1,3 +1,5 @@
+//Bagian 2 — Data Representation dan Array of Objects
+
 const products = [
 { id: 1, title: "Laptop", price: 1200, category: "laptops", stock: 5 },
 { id: 2, title: "Smartphone", price: 800, category: "phones", stock: 15 },
