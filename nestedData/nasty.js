@@ -47,17 +47,17 @@ const jumlahReview = products.map(product => ({
   title: product.title,
   totalReviews: product.reviews.length
 }));
-console.log("jumlah review:", jumlahReview);
+console.log(jumlahReview);
 
 //Dari seluruh produk, kumpulkan review yang ratingnya 5.
 const reviewBintangLima = products.flatMap(product =>
   product.reviews.filter(review => review.rating === 5)
 );
-console.log("review rating 5:", reviewBintangLima);
+console.log(reviewBintangLima);
 
 //Hitung rata-rata rating dari array reviews pada setiap produk 
 // (bukan dari field rating yang sudah tersedia, tapi dihitung ulang secara manual).
-const averageRatings = products.map(product => {
+const ratingRata = products.map(product => {
   let totalRating = 0;
 
   for (const review of product.reviews) {
@@ -70,18 +70,18 @@ const averageRatings = products.map(product => {
     averageRating: totalRating / product.reviews.length
   };
 });
-console.log("rata-rata rating:", averageRatings);
+console.log(ratingRata);
 
 //Temukan produk dengan jumlah review terbanyak.
-const productMostReviews = products.reduce((mostReviewed, product) =>
+const produkBanyakReview = products.reduce((mostReviewed, product) =>
   product.reviews.length > mostReviewed.reviews.length
     ? product
     : mostReviewed
 );
-console.log("produk dengan review paling banyak:", productMostReviews);
+console.log(produkBanyakReview);
 
 //Kumpulkan seluruh nilai rating dari semua review di semua produk menjadi satu array datar.
 const semuaReview = products.flatMap(product =>
   product.reviews.map(review => review.rating)
 );
-console.log("semua rating review:", semuaReview);
+console.log(semuaReview);
